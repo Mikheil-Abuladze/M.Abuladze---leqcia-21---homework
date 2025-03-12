@@ -189,20 +189,37 @@ const errorMessage = document.querySelector(".error-message");
 personalNumberInput.addEventListener("input", function () {
   let value = personalNumberInput.value;
 
-  // Allow only digits
   value = value.replace(/\D/g, "");
 
-  // Limit the input to 11 digits
   if (value.length > 11) {
     value = value.slice(0, 11);
   }
 
-  // Update the input with the restricted value
   personalNumberInput.value = value;
 
-  // Show error if the value length is not exactly 11 digits
   if (value.length !== 11) {
     errorMessage.textContent = "Personal number must be exactly 11 digits.";
+  } else {
+    errorMessage.textContent = "";
+  }
+});
+
+const mobileNumberInput = document.getElementById("mobile-number");
+const errorMessage = document.querySelector(".error-message");
+
+mobileNumberInput.addEventListener("input", function () {
+  let value = mobileNumberInput.value;
+
+  value = value.replace(/\D/g, "");
+
+  if (value.length > 9) {
+    value = value.slice(0, 9);
+  }
+
+  mobileNumberInput.value = value;
+
+  if (value.length !== 9) {
+    errorMessage.textContent = "Mobile number must be exactly 9 digits.";
   } else {
     errorMessage.textContent = "";
   }
