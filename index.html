@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
     <title>Document</title>
-    <link rel="stylesheet" href="src/css/style.css" />
-    <script src="src/js/app.js" defer></script>
   </head>
   <body>
     <section class="form">
       <form action="https://www.google.com/search?" method="GET">
-        <input type="text" name="q" />
+        <input type="text" name="q" title="Search" placeholder="Search..." />
       </form>
       <form action="/save-user" id="form" novalidate>
         <div class="form-group">
@@ -24,103 +24,44 @@
           <span class="error-message"></span>
         </div>
         <div class="form-group">
-          <label for="personal-number">Personal Number</label>
-          <input
-            type="text"
-            id="personal-number"
-            name="personal-number"
-            maxlength="11"
-            pattern="\d{11}"
-          />
-          <span class="error-message"></span>
-        </div>
-        <div class="form-group">
-          <label for="mobile-number">Mobile Number</label>
-          <input
-            type="text"
-            id="mobile-number"
-            name="mobile-number"
-            maxlength="9"
-            pattern="\d{9}"
-          />
-          <span class="error-message"></span>
-        </div>
-        <div class="form-group">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required />
           <span class="error-message"></span>
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" />
-          <span class="error-message"></span>
-        </div>
-        <div class="form-group">
-          <label for="password-confirmation">Password Confirmation</label>
+          <label for="personal-number">Personal Number</label>
           <input
-            type="password"
-            id="password-confirmation"
-            name="password-confirmation"
+            type="text"
+            id="personal-number"
+            name="personal-number"
+            required
           />
           <span class="error-message"></span>
         </div>
-        <button type="submit">submit</button>
+        <div class="form-group">
+          <label for="mobile-number">Mobile Number</label>
+          <input type="text" id="mobile-number" name="mobile-number" required />
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+          <span class="error-message"></span>
+        </div>
+
+        <button type="submit">Submit</button>
       </form>
     </section>
-    <section class="slider">
-      <div class="slider-wrapper">
-        <div class="slide show-slide">
-          <img src="src/img/1.jpg" alt="" />
-          <div class="slide-desc">
-            <h3>slide 1</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
-              explicabo, excepturi eos dolore maiores laboriosam cum eius odio
-              doloremque. Nostrum?
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <img src="src/img/2.jpg" alt="" />
-          <div class="slide-desc">
-            <h3>slide 2</h3>
-            <p>
-              maiores laboriosam cum eius odio doloremque. Nostrum? Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit. Sit explicabo,
-              excepturi eos dolore
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <img src="src/img/3.jpg" alt="" />
-          <div class="slide-desc">
-            <h3>slide 3</h3>
-            <p>
-              maiores laboriosam cum eius odio doloremque. Sit explicabo,
-              excepturi eos doloreNostrum? Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit.
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <img src="src/img/4.jpg" alt="" />
-          <div class="slide-desc">
-            <h3>slide 4</h3>
-            <p>
-              Lorem ipsum dolor sit amet, maiores laboriosam cum eius odio
-              doloremque. Sit explicabo, excepturi eos doloreNostrum?
-              consectetur adipisicing elit.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div id="clock"></div>
-      <div id="countdown"></div>
-    </section>
-
-    <!-- dialog, modal -->
     <div class="modal" id="reg-confirmation">
       <div class="content">
         <p>this is modal content</p>
